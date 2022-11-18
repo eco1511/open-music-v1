@@ -1,3 +1,8 @@
+//user
+import users from './api/users/index.js';
+import UsersService from './services/postgres/UsersService.js';
+import UsersValidator from './validator/users/index.js';
+
 require('dotenv').config();
 const Hapi = require('@hapi/hapi');
 
@@ -52,6 +57,13 @@ const init = async () => {
       options: {
         service: new AlbumsService(),
         validator: AlbumsValidator,
+      },
+    },
+    {
+      plugin: users,
+      options: {
+        service: UsersService,
+        validator: UsersValidator,
       },
     },
   ], );

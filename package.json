@@ -8,7 +8,7 @@
     "lint": "eslint ./src",
     "migrate": "node-pg-migrate"
   },
-  "author": "",
+  "author": "eco_creator",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.26.0",
